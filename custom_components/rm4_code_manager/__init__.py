@@ -29,6 +29,13 @@ DOMAIN = "rm4_code_manager"
 BACKUPS = "rm4_code_manager_backups"
 MANAGER_VERSION = "0.1.1"
 
+# Continue supporting the optional legacy `rm4_code_manager:` YAML entry
+# while allowing the preferred UI-based config flow.
+CONFIG_SCHEMA = vol.Schema(
+    {vol.Optional(DOMAIN): vol.Any(None, vol.Schema({}))},
+    extra=vol.ALLOW_EXTRA,
+)
+
 
 def _remote_entities(hass: HomeAssistant) -> dict[str, Any]:
     component = hass.data.get(DATA_INSTANCES, {}).get("remote")

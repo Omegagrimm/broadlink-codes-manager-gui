@@ -1,9 +1,7 @@
 {
   "domain": "rm4_code_manager",
   "name": "Broadlink Code Manager",
-  "version": "0.1.1",
-  "documentation": "https://github.com/Omegagrimm/broadlink-codes-manager-gui#readme",
-  "issue_tracker": "https://github.com/Omegagrimm/broadlink-codes-manager-gui/issues",
+  "codeowners": [],
   "config_flow": true,
   "dependencies": [
     "frontend",
@@ -11,6 +9,8 @@
     "websocket_api",
     "remote"
   ],
-  "codeowners": [],
-  "iot_class": "local_push"
+  "documentation": "https://github.com/Omegagrimm/broadlink-codes-manager-gui#readme",
+  "iot_class": "local_push",
+  "issue_tracker": "https://github.com/Omegagrimm/broadlink-codes-manager-gui/issues",
+  "version": "0.1.1"
 }
