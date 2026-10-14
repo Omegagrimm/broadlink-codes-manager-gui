@@ -6,6 +6,12 @@ Version **0.1.1**: HACS repository layout and zero-configuration UI setup, plus 
 
 > **Prototype safety notice:** This is not yet tested on a real Home Assistant installation or RM4 Pro. Make a full Home Assistant backup before use. Renaming and direct Base64 editing rely on private Broadlink interfaces and may stop working when Home Assistant changes. Only Home Assistant administrators can access the panel and WebSocket actions. Avoid testing with doors, gates, locks, or safety-critical devices.
 
+## Privacy and keeping your codes private
+
+The public GitHub repository contains **source code only**. It does not include any Home Assistant credentials, learned IR/RF commands, network addresses, or an instance configuration. The manager interacts with your own Home Assistant instance and the official Broadlink integration; it does **not** upload command data to GitHub or a third-party service. If you explicitly export commands from the interface, the downloaded file is for your local use.
+
+Home Assistant stores learned codes and the manager's safety snapshots locally under `.storage/`. **Never commit or attach** your Home Assistant `.storage/` files, `configuration.yaml`, `secrets.yaml`, command exports, backups, or debug logs containing codes/credentials to a public issue or repository. The `.gitignore` helps prevent accidental commits but does not replace checking files before sharing. Avoid including private details when filing issues.
+
 ## Installation through HACS
 
 Prerequisites: Home Assistant, HACS installed and working, and the **official Broadlink integration** already configured with a `remote.*` entity.
