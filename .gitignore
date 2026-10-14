@@ -1,0 +1,36 @@
+# Python caches and OS artifacts
+__pycache__/
+*.py[cod]
+.DS_Store
+
+# Local configuration, credentials, and private keys
+.env
+.env.*
+*.env
+*.pem
+*.key
+*.p12
+*.pfx
+*.ovpn
+secrets.yaml
+configuration.yaml
+.storage/
+**/.storage/
+
+# Home Assistant runtime, backup, and exported remote-code data
+backups/
+**/backups/
+exports/
+*_codes_export.json
+*remote_codes*.json
+*_backups.json
+*.sqlite
+*.sqlite3
+*.db
+*.db-*
+*.log
+
+# Local packaged archives are not source code
+*.zip
+*.7z
+*.tar.gz
